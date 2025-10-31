@@ -1,0 +1,323 @@
+/* Layout */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.custom-select-arrow {
+  appearance: none;           /* Remove default arrow */
+  -webkit-appearance: none;   /* Safari/Chrome */
+  -moz-appearance: none;      /* Firefox */
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="12" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background-color: #fff;
+  background-size: 28px;
+  padding-right: 30px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Dropdown inside sidebar */
+.sidebar .nav-select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #334155;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+.parent-menu {
+  padding: 8px 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.submenu {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.submenu li {
+  padding: 6px 10px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.submenu li.active a {
+  color: #00c4ff; 
+  font-weight: bold;
+}
+
+.sidebar .nav-select option {
+  background-color: #1e293b;
+  color: white;
+}
+
+
+.sidebar .logout-btn {
+  width: 100%;
+  background: #ef4444; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sidebar .logout-btn:hover {
+  background: #dc2626; 
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes logout to bottom */
+  height: 100vh; /* full height sidebar */
+  padding: 1rem;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+
+
+
+.logout-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
+
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 8px 12px 8px 35px; /* extra left padding for icon */
+  border-radius: 20px;
+  border: 2px solid #4caf50;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input-wrapper input:focus {
+  border-color: #2196f3;
+  box-shadow: 0px 0px 8px rgba(33, 150, 243, 0.4);
+}
+
+.search-icon {
+  margin-left: 215px;
+  position: absolute;
+  left: 10px;
+  color: #888;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.search-input-wrapper input:focus + .search-icon {
+  color: #2196f3;
+}
+
+
+
+.sidebar {
+  background-color: #2f3f58; 
+  color: white;
+  height: 100vh;
+  width: 230px;
+  padding-top: 20px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+}
+
+/* Dashboard title */
+.sidebar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #60a5fa; /* sky blue */
+}
+
+/* Remove default list style */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar links */
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  color: #e2e8f0; /* light gray */
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 18px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.sidebar ul li a:hover {
+  background-color: #3b82f6; /* blue */
+  color: white;
+}
+
+/* Active link */
+.sidebar ul li.active a {
+  background-color: #6366f1; /* indigo */
+  color: white;
+  font-weight: 600;
+}
+
+
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Card Table */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table thead {
+  background: #f1f3f9;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.custom-table tr:hover {
+  background: #fafafa;
+}
+
+/* Action Buttons */
+.btn-action {
+  margin-right: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-action.view {
+  background: #17a2b8;
+  color: #fff;
+}
+
+.btn-action.edit {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-action.delete {
+  background: #dc3545;
+  color: #fff;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end; /* ✅ right corner */
+  gap: 6px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: none;
+  background: #f1f3f9;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #5d5fef;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Custom arrow for all select fields */
+
+
+
