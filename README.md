@@ -1,1 +1,1 @@
-# InternProjectEmadHubFrontend
+Employee Management & AI Task Suggestion System
